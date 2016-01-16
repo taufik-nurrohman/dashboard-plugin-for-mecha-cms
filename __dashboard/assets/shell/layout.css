@@ -1,0 +1,26 @@
+body {
+  padding-top:3.076923076923077em;
+}
+.board {position:relative}
+.board-left {
+  position:absolute;
+  top:0;
+  left:0;
+  width:200px;
+}
+.board-right {
+  padding:1.3846153846153846em;
+  margin:0 0 0 200px;
+}
+.widget-manager-menu ul,
+.widget-manager-menu li {
+  margin:0;
+  padding:0;
+  list-style:none;
+}
+.widget-manager-menu a {
+  display:block;
+  height:2em;
+  line-height:2em;
+  padding:0 .4em;
+}

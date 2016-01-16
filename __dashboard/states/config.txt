@@ -1,0 +1,1 @@
+a:1:{s:4:"skin";s:12:"minima-light";}

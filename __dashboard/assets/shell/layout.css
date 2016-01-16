@@ -1,26 +1,72 @@
-body {
-  padding-top:3.076923076923077em;
-}
+body {padding-top:3.076923076923077em}
+
 .board {position:relative}
+
 .board-left {
   position:absolute;
   top:0;
   left:0;
-  width:200px;
+  width:15.384615384615385em;
 }
+
 .board-right {
-  padding:1.3846153846153846em;
-  margin:0 0 0 200px;
+  padding:1.3846153846153846em 1.3846153846153846em 0;
+  margin:0 0 0 15.384615384615385em;
 }
+
 .widget-manager-menu ul,
 .widget-manager-menu li {
   margin:0;
   padding:0;
   list-style:none;
 }
+
 .widget-manager-menu a {
   display:block;
   height:2em;
   line-height:2em;
   padding:0 .4em;
+}
+
+.modal-body {margin-bottom:3.076923076923077em}
+.modal-footer {height:3.076923076923077em}
+
+@media (max-width:45.625em) {
+  .board-left {width:3.076923076923077em}
+  .board-right {margin-left:3.076923076923077em}
+  .widget-manager-menu li {position:relative}
+  .widget-manager-menu a {
+    padding-right:0;
+    padding-left:0;
+    height:3.076923076923077em;
+    line-height:3.076923076923077em;
+    text-align:center;
+  }
+  .widget-manager-menu .label {display:none}
+  .widget-manager-menu .counter {
+    display:block;
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    background-color:yellow;
+    color:black;
+  }
+  .widget-manager-menu .counter:before,
+  .widget-manager-menu .counter:after {display:none}
+}
+
+@media (max-width:31.25em) {
+  .grid-group .grid:first-child,
+  .grid-group .grid:first-child + .grid {
+    float:none;
+    display:block;
+    width:auto;
+    margin-right:0;
+    margin-left:0;
+    text-align:inherit;
+  }
+  .grid-group .grid:first-child:empty {display:none}
+  .grid-group .form-label {margin-bottom:.2em}
 }

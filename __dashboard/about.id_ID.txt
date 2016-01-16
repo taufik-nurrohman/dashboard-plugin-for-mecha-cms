@@ -1,0 +1,10 @@
+Title: Dasbor
+Author: Taufik Nurrohman
+URL: http://mecha-cms.com
+Version: 1.0.0
+
+====
+
+> Tampilan kustom untuk halaman manajer.
+
+Pisahkan tampilan halaman _backend_ Anda dari halaman _frontend_.

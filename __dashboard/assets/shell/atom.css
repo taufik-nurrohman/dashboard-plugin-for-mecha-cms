@@ -103,9 +103,6 @@ abbr,dfn {
   cursor:help;
 }
 
-abbr[title],dfn[title] {border-bottom:1px solid transparent}
-abbr[title]:hover,dfn[title]:hover {border-bottom:1px solid}
-
 
 /* FORM */
 
@@ -161,11 +158,11 @@ input[type="submit"],
   cursor:pointer;
   text-align:center;
   text-decoration:none;
-  padding-right:.7692307692307693em;
-  padding-left:.7692307692307693em;
-  -webkit-border-radius:.3076923076923077em;
-  -moz-border-radius:.3076923076923077em;
-  border-radius:.3076923076923077em;
+  padding-right:.46153846153846156em;
+  padding-left:.46153846153846156em;
+  -webkit-border-radius:.15384615384615385em;
+  -moz-border-radius:.15384615384615385em;
+  border-radius:.15384615384615385em;
   -webkit-user-select:none;
   -moz-user-select:none;
   -ms-user-select:none;
@@ -258,8 +255,8 @@ label input:checked + span {opacity:.8}
 .form-label,
 .form-static {
   display:block;
-  padding-top:.7692307692307693em;
-  padding-bottom:.7692307692307693em;
+  padding-top:.3076923076923077em;
+  padding-bottom:.3076923076923077em;
   line-height:normal;
 }
 
@@ -311,6 +308,8 @@ table[border="1"] td {
 
 
 /* CODE */
+
+pre,code,.code {font-family:Monospace}
 
 pre {
   overflow:auto;
@@ -390,4 +389,38 @@ dd {margin-left:1em}
 img {
   max-width:100%;
   height:auto;
+}
+
+
+/* PLACEHOLDER */
+
+::-webkit-input-placeholder {
+  color:inherit;
+  opacity:.4;
+  overflow:visible;
+  line-height:inherit;
+}
+
+::-moz-placeholder {
+  color:inherit;
+  opacity:.4;
+  line-height:inherit;
+}
+
+:-moz-placeholder {
+  color:inherit;
+  opacity:.4;
+  line-height:inherit;
+}
+
+:-ms-input-placeholder {
+  color:inherit;
+  opacity:.4;
+  line-height:inherit;
+}
+
+:placeholder {
+  color:inherit;
+  opacity:.4;
+  line-height:inherit;
 }

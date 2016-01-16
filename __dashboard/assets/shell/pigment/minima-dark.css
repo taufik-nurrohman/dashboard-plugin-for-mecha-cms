@@ -1,0 +1,183 @@
+body {
+  background-color:#222;
+  color:#AAA;
+}
+
+a {color:#7A8A6D}
+a:focus,
+a:hover {color:#98AD89}
+
+pre {
+  background-color:#444;
+  color:white;
+}
+
+button,
+input,
+select,
+textarea,
+.btn {
+  background-color:#242424;
+  color:#EEE;
+  border:1px solid #404040;
+  border-bottom-color:#4B4B4B;
+  -webkit-box-shadow:inset 0 2px 0 rgba(0,0,0,.2);
+  -moz-box-shadow:inset 0 2px 0 rgba(0,0,0,.2);
+  box-shadow:inset 0 2px 0 rgba(0,0,0,.2);
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.btn {
+  border-color:transparent;
+  background-color:#D85050;
+  color:white;
+  -webkit-box-shadow:none;
+  -moz-box-shadow:none;
+  box-shadow:none;
+}
+
+button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+.btn:focus,
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover,
+.btn:hover {
+  background-color:#E86264;
+  color:white;
+}
+
+button:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active,
+.btn:active {
+  background-color:#C6484B;
+  color:white;
+}
+
+.btn-default {
+  background-color:#EEE;
+  color:#333;
+}
+
+.btn-default:focus,
+.btn-default:hover {
+  background-color:white;
+  color:#333;
+}
+
+.btn-default:active {
+  background-color:#DDD;
+  color:#333;
+}
+
+fieldset,
+hr,
+.custom-modal,
+.modal-area,
+.main-action-group,
+.media,
+.tab-button,
+.table-bordered td,
+.table-bordered th {border-color:#3B3B3B}
+
+.table-bordered .active {background-color:#FFC}
+
+.board-right {background-color:#2E2E2E}
+
+.widget-manager-menu a {border-right:1px solid transparent}
+.widget-manager-menu a:focus,
+.widget-manager-menu a:hover {background-color:#292929}
+.widget-manager-menu .current a {
+  background-color:#1C1C1C;
+  border-right-color:inherit;
+}
+
+.tab-button {
+  background-color:#292929;
+  font-weight:normal;
+  font-size:76%;
+  text-transform:uppercase;
+  margin-right:0;
+  margin-left:0;
+  padding-right:1.2em;
+  padding-left:1.2em;
+}
+
+.tab-button.active {background-color:transparent}
+.tab-button + .tab-button {border-left-width:0}
+
+.checkbox,
+.radio,
+.checkbox:focus,
+.radio:focus,
+.checkbox:hover,
+.radio:hover {color:#666}
+
+.tooltip {
+  background-color:black;
+  border-color:black;
+  color:white;
+}
+
+.tooltip a {color:white}
+
+.custom-modal,
+.modal-area {background-color:#222}
+
+.about-author {
+  background-color:#A9A9A9;
+  color:#222;
+}
+
+.about-url,
+.about-url:focus,
+.about-url:hover,
+.about-url:active {color:inherit}
+
+.about-title {
+  background-color:#79896D;
+  color:#222;
+}
+
+.message {
+  background-color:#CCC;
+  color:#7F7F7F;
+}
+
+.message-success {
+  background-color:#CCE5CC;
+  color:#7F9F7F;
+}
+
+.message-info {
+  background-color:#CCF;
+  color:#7F7FBF;
+}
+
+.message-warning {
+  background-color:#FFEDCC;
+  color:#BFA87F;
+}
+
+.message-error {
+  background-color:#FCC;
+  color:#BF7F7F;
+}
+
+.text-fade,
+.page-time {color:#666}
+
+@media (max-width:45.625em) {
+  .widget-manager-menu .counter {
+    background-color:#C65252;
+    color:white;
+  }
+}

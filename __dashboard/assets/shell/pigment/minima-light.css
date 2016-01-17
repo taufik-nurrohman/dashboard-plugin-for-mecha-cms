@@ -177,7 +177,7 @@ hr,
 
 @media (max-width:45.625em) {
   .widget-manager-menu .counter {
-    background-color:#FF7F7F;
-    color:white;
+    background-color:#555;
+    color:#EFEFEF;
   }
 }

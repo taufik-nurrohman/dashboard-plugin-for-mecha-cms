@@ -8,7 +8,7 @@ a:focus,
 a:hover {color:#98AD89}
 
 pre {
-  background-color:#444;
+  background-color:#333;
   color:white;
 }
 
@@ -88,7 +88,7 @@ hr,
 .table-bordered td,
 .table-bordered th {border-color:#3B3B3B}
 
-.table-bordered .active {background-color:#FFC}
+.table-bordered .active {background-color:#343431}
 
 .board-right {background-color:#2E2E2E}
 
@@ -133,8 +133,8 @@ hr,
 .modal-area {background-color:#222}
 
 .about-author {
-  background-color:#A9A9A9;
-  color:#222;
+  background-color:#AAA;
+  color:#2E2E2E;
 }
 
 .about-url,
@@ -144,40 +144,26 @@ hr,
 
 .about-title {
   background-color:#79896D;
-  color:#222;
+  color:#2E2E2E;
 }
 
 .message {
-  background-color:#CCC;
-  color:#7F7F7F;
+  background-color:#333;
+  border:1px solid;
+  color:white;
 }
 
-.message-success {
-  background-color:#CCE5CC;
-  color:#7F9F7F;
-}
-
-.message-info {
-  background-color:#CCF;
-  color:#7F7FBF;
-}
-
-.message-warning {
-  background-color:#FFEDCC;
-  color:#BFA87F;
-}
-
-.message-error {
-  background-color:#FCC;
-  color:#BF7F7F;
-}
+.message-success {color:lime}
+.message-info {color:skyblue}
+.message-warning {color:orange}
+.message-error {color:red}
 
 .text-fade,
 .page-time {color:#666}
 
 @media (max-width:45.625em) {
   .widget-manager-menu .counter {
-    background-color:#C65252;
-    color:white;
+    background-color:#AAA;
+    color:#222;
   }
 }

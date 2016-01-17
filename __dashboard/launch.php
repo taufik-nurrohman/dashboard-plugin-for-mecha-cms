@@ -20,12 +20,21 @@ function __do_meta_1() {
 // Add minimal page meta data
 Weapon::add('meta', '__do_meta_1', 1);
 
+// Add link to the frontend
+Config::merge('manager_bar', array(
+    $config->title => array(
+        'icon' => 'home',
+        'url' => '/',
+        'stack' => 9.009
+    )
+));
+
 $dashboard_config = File::open(__DIR__ . DS . 'states' . DS . 'config.txt')->unserialize();
 
 Asset::ignore(SHIELD . DS . $config->shield . DS . 'assets' . DS . 'shell' . DS . 'manager.css');
 
 Weapon::add('shell_after', function() use($dashboard_config) {
-	echo Asset::stylesheet(__DIR__ . DS . 'assets' . DS . 'shell' . DS . 'pigment' . DS . $dashboard_config['skin'] . '.css', "", 'shell/dashboard.' . $dashboard_config['skin'] . '.min.css');
+    echo Asset::stylesheet(__DIR__ . DS . 'assets' . DS . 'shell' . DS . 'pigment' . DS . $dashboard_config['skin'] . '.css', "", 'shell/dashboard.' . $dashboard_config['skin'] . '.min.css');
 }, 11);
 
 Filter::add('shield:path', function() {

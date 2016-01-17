@@ -58,15 +58,14 @@ body {padding-top:3.076923076923077em}
 }
 
 @media (max-width:31.25em) {
-  .grid-group .grid:first-child,
-  .grid-group .grid:first-child + .grid {
+  .grid {
     float:none;
     display:block;
     width:auto;
-    margin-right:0;
-    margin-left:0;
+    margin:0;
+    padding:0;
     text-align:inherit;
   }
-  .grid-group .grid:first-child:empty {display:none}
-  .grid-group .form-label {margin-bottom:.2em}
+  .grid.form-label {margin-bottom:.2em}
+  .grid:empty {display:none}
 }

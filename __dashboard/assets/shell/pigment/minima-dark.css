@@ -122,15 +122,15 @@ hr,
 .radio:hover {color:#666}
 
 .tooltip {
-  background-color:black;
-  border-color:black;
-  color:white;
+  background-color:#AAA;
+  border-color:#AAA;
+  color:#2E2E2E;
 }
 
-.tooltip a {color:white}
+.tooltip a {color:inherit}
 
 .custom-modal,
-.modal-area {background-color:#222}
+.modal-area {background-color:#2E2E2E}
 
 .about-author {
   background-color:#AAA;

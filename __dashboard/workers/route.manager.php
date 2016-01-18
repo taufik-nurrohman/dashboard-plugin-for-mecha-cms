@@ -1,10 +1,5 @@
 <?php
 
-// Delete `shell/manager.min.css`
-if($manager_css = File::exist(ASSET . DS . 'shell' . DS . 'manager.min.css')) {
-    File::open($manager_css)->delete();
-}
-
 // Update configuration data
 Route::accept($config->manager->slug . '/plugin/' . File::B(File::D(__DIR__)) . '/update', function() use($config, $speak) {
     if($request = Request::post()) {

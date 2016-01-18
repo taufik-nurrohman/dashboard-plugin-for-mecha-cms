@@ -127,7 +127,7 @@ hr,
   color:white;
 }
 
-.tooltip a {color:white}
+.tooltip a {color:inherit}
 
 .custom-modal,
 .modal-area {background-color:white}

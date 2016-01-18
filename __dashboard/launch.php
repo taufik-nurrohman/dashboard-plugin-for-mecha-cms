@@ -1,5 +1,8 @@
 <?php
 
+// Load the configuration data
+$dashboard_config = File::open(__DIR__ . DS . 'states' . DS . 'config.txt')->unserialize();
+
 // Remove default page meta
 Weapon::eject('meta', 'do_meta_1');
 Weapon::eject('meta', 'do_meta_2');
@@ -29,9 +32,10 @@ Config::merge('manager_bar', array(
     )
 ));
 
-$dashboard_config = File::open(__DIR__ . DS . 'states' . DS . 'config.txt')->unserialize();
-
-Asset::ignore(SHIELD . DS . $config->shield . DS . 'assets' . DS . 'shell' . DS . 'manager.css');
+Asset::ignore(array(
+    SHIELD . DS . $config->shield . DS . 'assets' . DS . 'shell' . DS . 'manager.css',
+    ASSET . DS . 'shell' . DS . 'manager.min.css'
+));
 
 Weapon::add('shell_after', function() use($dashboard_config) {
     echo Asset::stylesheet(__DIR__ . DS . 'assets' . DS . 'shell' . DS . 'pigment' . DS . $dashboard_config['skin'] . '.css', "", 'shell/dashboard.' . $dashboard_config['skin'] . '.min.css');

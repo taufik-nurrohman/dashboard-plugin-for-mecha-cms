@@ -3,10 +3,22 @@
   <head>
   <?php Weapon::fire('SHIPMENT_REGION_TOP'); ?>
   <?php Weapon::fire('shell_before'); ?>
-  <?php $root = File::D(__DIR__) . DS . 'assets' . DS . 'shell' . DS; ?>
+  <?php $root_1 = PLUGIN . DS . 'manager' . DS . 'assets' . DS . 'shell' . DS; ?>
+  <?php $root_2 = File::D(__DIR__) . DS . 'assets' . DS . 'shell' . DS; ?>
   <?php echo Asset::stylesheet(array(
-      $root . 'atom.css',
-      $root . 'layout.css'
+      // `manager`
+      $root_1 . 'row.css',
+      $root_1 . 'upload.css',
+      $root_1 . 'tab.css',
+      $root_1 . 'toggle.css',
+      $root_1 . 'modal.css',
+      $root_1 . 'tooltip.css',
+      $root_1 . 'sortable.css',
+      $root_1 . 'accordion.css',
+      $root_1 . 'layout.css',
+      // `__dashboard`
+      $root_2 . 'atom.css',
+      $root_2 . 'layout.css',
   ), "", 'shell/dashboard.min.css'); ?>
   <?php Weapon::fire('shell_after'); ?>
   </head>

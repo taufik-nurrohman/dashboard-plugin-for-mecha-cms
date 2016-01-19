@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html dir="<?php echo $config->language_direction; ?>" class="page-<?php echo $config->page_type; ?>">
   <head>
   <?php Weapon::fire('SHIPMENT_REGION_TOP'); ?>
   <?php Weapon::fire('shell_before'); ?>
@@ -30,7 +30,7 @@
     </aside>
     <article class="board-right cl cf">
       <?php Shield::chunk('page.header'); ?>
-      <?php Shield::chunk('page.body'); ?>
+      <?php Shield::chunk($config->page_type !== '404' ? 'page.body' : 'page.body.404'); ?>
     </article>
   </div>
   <?php Weapon::fire('cargo_after'); ?>

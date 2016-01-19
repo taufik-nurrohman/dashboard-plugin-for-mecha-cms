@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="<?php echo $config->language_direction; ?>" class="page-<?php echo $segment; ?>">
+<html dir="<?php echo $config->language_direction; ?>" class="page-<?php echo isset($segment) && $config->page_type !== '404' ? $segment : '404'; ?>">
   <head>
   <?php Weapon::fire('SHIPMENT_REGION_TOP'); ?>
   <?php Weapon::fire('shell_before'); ?>

@@ -58,6 +58,10 @@ body {padding-top:3.076923076923077em}
 }
 
 @media (max-width:31.25em) {
+  .grid-group {
+    margin-right:0;
+    margin-left:0;
+  }
   .grid {
     float:none;
     display:block;

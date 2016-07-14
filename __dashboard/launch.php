@@ -1,9 +1,18 @@
 <?php
 
-// Load the configuration data
-$dashboard_config = File::open(__DIR__ . DS . 'states' . DS . 'config.txt')->unserialize();
+// Create fake page on `manager`
+Route::accept($config->manager->slug, function() use($config, $speak) {
+    Config::set(array(
+        'page_title' => $config->title . $config->title_separator . $speak->manager->title_manager,
+        'cargo' => __DIR__ . DS . 'workers' . DS . 'cargo.manager.php'
+    ));
+    Shield::attach('manager');
+}, 1);
 
-// Remove default page meta
+// Load the configuration data
+$c_dashboard = $config->states->{'plugin_' . md5(File::B(__DIR__))};
+
+// Remove default page meta data
 Weapon::eject('meta', 'do_meta_1');
 Weapon::eject('meta', 'do_meta_2');
 Weapon::eject('meta', 'do_meta_3');
@@ -37,12 +46,10 @@ Asset::ignore(array(
     ASSET . DS . 'shell' . DS . 'manager.min.css'
 ));
 
-Weapon::add('shell_after', function() use($dashboard_config) {
-    echo Asset::stylesheet(__DIR__ . DS . 'assets' . DS . 'shell' . DS . 'pigment' . DS . $dashboard_config['skin'] . '.css', "", 'shell/dashboard.' . $dashboard_config['skin'] . '.min.css');
+Weapon::add('shell_after', function() use($c_dashboard) {
+    echo Asset::stylesheet(__DIR__ . DS . 'assets' . DS . 'shell' . DS . 'pigment' . DS . $c_dashboard->skin . '.css', "", 'shell/dashboard.' . $c_dashboard->skin . '.min.css');
 }, 11);
 
 Filter::add('shield:path', function() {
     return __DIR__ . DS . 'workers' . DS . 'manager.php';
 }, 1);
-
-require __DIR__ . DS . 'workers' . DS . 'route.manager.php';
